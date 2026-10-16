@@ -4,5 +4,14 @@
     "item": "minecraft:redstone"
   },
   "energy": 5000000,
-  "output_tag": "c:gems/ruby"
+  "output_tag": "c:gems/ruby",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:gems/ruby"
+      }
+    }
+  ]
 }

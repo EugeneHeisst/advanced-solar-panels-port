@@ -4,5 +4,21 @@
     "tag": "c:ingots/gold"
   },
   "energy": 9000000,
-  "output_tag": "c:ingots/platinum"
+  "output_tag": "c:ingots/platinum",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/gold"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/platinum"
+      }
+    }
+  ]
 }

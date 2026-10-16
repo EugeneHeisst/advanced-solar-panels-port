@@ -4,5 +4,21 @@
     "tag": "c:ingots/titanium"
   },
   "energy": 500000,
-  "output_tag": "c:ingots/chromium"
+  "output_tag": "c:ingots/chromium",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/titanium"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/chromium"
+      }
+    }
+  ]
 }

@@ -4,5 +4,21 @@
     "tag": "c:ingots/tin"
   },
   "energy": 500000,
-  "output_tag": "c:ingots/silver"
+  "output_tag": "c:ingots/silver",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/tin"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/silver"
+      }
+    }
+  ]
 }

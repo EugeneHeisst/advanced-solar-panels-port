@@ -4,5 +4,21 @@
     "tag": "c:dusts/titanium"
   },
   "energy": 500000,
-  "output_tag": "c:dusts/chromium"
+  "output_tag": "c:dusts/chromium",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/titanium"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/chromium"
+      }
+    }
+  ]
 }

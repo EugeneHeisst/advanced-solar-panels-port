@@ -4,5 +4,14 @@
     "item": "minecraft:lapis_lazuli"
   },
   "energy": 5000000,
-  "output_tag": "c:gems/sapphire"
+  "output_tag": "c:gems/sapphire",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:gems/sapphire"
+      }
+    }
+  ]
 }

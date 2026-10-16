@@ -84,6 +84,9 @@ for n,(inp,out,energy,*count) in enumerate(mt):
  r={'type':'advanced_solar_panels:molecular_transformer','input':ingredient(inp),'energy':energy}
  if out.startswith('#'):r['output_tag']=out[1:]
  else:r['output']={'id':out if ':' in out else 'advanced_solar_panels:'+out,'count':count[0] if count else 1}
+ # like the original, which only registered an OreDict conversion when both sides existed: load it only when every tag has an item
+ tags=[t[1:] for t in (inp,out) if t.startswith('#')]
+ if tags:r['neoforge:conditions']=[{'type':'neoforge:not','value':{'type':'neoforge:tag_empty','tag':t}} for t in tags]
  write(D/'recipe/molecular'/f'{n:02d}.json',r)
 print('Generated ASP original assets, 23 crafting recipes, 22 molecular recipes')
 

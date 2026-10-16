@@ -4,5 +4,21 @@
     "tag": "c:ingots/copper"
   },
   "energy": 300000,
-  "output_tag": "c:ingots/nickel"
+  "output_tag": "c:ingots/nickel",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/copper"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/nickel"
+      }
+    }
+  ]
 }
