@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="Advanced Solar Panels license (original); unofficial port"
+[[mods]]
+modId="advanced_solar_panels"
+version="${version}"
+displayName="Advanced Solar Panels PORT"
+authors="Icedfire, SeNtiMeL, Chocohead"
+description="Неофициальный порт Advanced Solar Panels 4.3.0 на Minecraft 1.21.1 (аддон IndustrialCraft 2 PORT). Unofficial port of Advanced Solar Panels 4.3.0 to Minecraft 1.21.1 (an IndustrialCraft 2 PORT addon)."
+[[dependencies.advanced_solar_panels]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.256,)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.advanced_solar_panels]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.advanced_solar_panels]]
+modId="ic2"
+type="required"
+versionRange="[${ic2_version},)"
+ordering="AFTER"
+side="BOTH"
