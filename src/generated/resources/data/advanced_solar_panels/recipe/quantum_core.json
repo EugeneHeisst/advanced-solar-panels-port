@@ -1,0 +1,30 @@
+{
+  "type": "ic2:shaped",
+  "pattern": [
+    "ANA",
+    "NEN",
+    "ANA"
+  ],
+  "key": {
+    "A": {
+      "item": "advanced_solar_panels:enriched_sunnarium_alloy"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "id": "advanced_solar_panels:quantum_core",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "advanced_solar_panels:config",
+      "key": "quantum_solar_panel",
+      "value": true
+    }
+  ]
+}

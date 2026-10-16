@@ -1,0 +1,8 @@
+{
+  "type": "advanced_solar_panels:molecular_transformer",
+  "input": {
+    "tag": "c:ingots/copper"
+  },
+  "energy": 300000,
+  "output_tag": "c:ingots/nickel"
+}

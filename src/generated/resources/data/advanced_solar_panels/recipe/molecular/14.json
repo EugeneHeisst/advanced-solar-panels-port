@@ -1,0 +1,11 @@
+{
+  "type": "advanced_solar_panels:molecular_transformer",
+  "input": {
+    "item": "ic2:industrial_diamond"
+  },
+  "energy": 1000000,
+  "output": {
+    "id": "minecraft:diamond",
+    "count": 1
+  }
+}

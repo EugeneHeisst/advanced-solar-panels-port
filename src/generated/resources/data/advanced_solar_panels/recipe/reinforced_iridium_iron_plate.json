@@ -1,0 +1,23 @@
+{
+  "type": "ic2:shaped",
+  "pattern": [
+    "ACA",
+    "CIC",
+    "ACA"
+  ],
+  "key": {
+    "A": {
+      "item": "ic2:advanced_alloy"
+    },
+    "C": {
+      "item": "ic2:carbon_plate"
+    },
+    "I": {
+      "item": "advanced_solar_panels:iridium_iron_plate"
+    }
+  },
+  "result": {
+    "id": "advanced_solar_panels:reinforced_iridium_iron_plate",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "advanced_solar_panels:molecular_transformer",
+  "input": {
+    "tag": "c:ingots/gold"
+  },
+  "energy": 9000000,
+  "output_tag": "c:ingots/platinum"
+}

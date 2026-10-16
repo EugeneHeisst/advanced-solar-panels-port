@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "advanced_solar_panels:advanced_solar_panel",
+    "advanced_solar_panels:hybrid_solar_panel",
+    "advanced_solar_panels:ultimate_solar_panel",
+    "advanced_solar_panels:quantum_solar_panel",
+    "advanced_solar_panels:quantum_generator",
+    "advanced_solar_panels:molecular_transformer"
+  ]
+}

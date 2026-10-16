@@ -2,7 +2,7 @@
 
 Rule from the user: when Claude's limit runs out, Codex continues from here, and returns the task to Claude when Claude's limit resets. To return it, write a final "Codex → Claude resume point" section and stop starting new batches. No push/release/install without the user; the GitHub repo is private.
 
-Reference: related/asp-reference (ASP 4.3.0 by Chocohead, MC 1.12.2, decompiled sources in src/, assets in jar/). Depends on IC2 PORT 0.1.17 (../industrialcraft2-modern/versions/0.1.17/…jar, set by `ic2_version` in gradle.properties). IC2 PORT is complete through 0.1.17 (see its CODEX_HANDOFF.md).
+Reference: related/asp-reference (ASP 4.3.0 by Chocohead, MC 1.12.2, decompiled sources in src/, assets in jar/). Depends on IC2 PORT 0.1.18 (../industrialcraft2-modern/versions/0.1.18/…jar, set by `ic2_version` in gradle.properties). IC2 PORT is complete through 0.1.17 (see its CODEX_HANDOFF.md).
 
 ## Claude batch 0.1.0 — in progress (2026-10-16 ~19:20)
 
@@ -32,3 +32,17 @@ Plan (package com.chocohead.advsolar):
 - Crafting recipes from Recipes.java use ic2:shaped/shapeless so charge carries over. IC2 port ids: advanced_alloy, carbon_plate, advanced_circuit, iridium_plate, coal_chunk, solar_panel, advanced_machine, reinforced_glass, nano_helmet, quantum_helmet, insulated_gold_cable, glass_fibre_cable, lv/hv/ev_transformer, thick_neutron_reflector, iridium_ore, industrial_diamond.
 - Assets: rename the jar textures (spaces) to snake_case.
 - Remaining work: lang en/ru from jar/.../lang, the MT renderer (PrettyMolecularTransformerModel port), JEI MT category, a server audit and a hidden silent client audit like IC2's, then versions/0.1.0 artifacts and a commit to the private repo.
+
+## Codex batch 0.1.0 — functional ASP port complete (2026-10-16 19:42 Moscow)
+
+Continued Claude's c827a87 WIP and its untracked items/tabs/charge-slot files. Implemented all six machines, shared IC2 EU registration/lifecycle, four charge slots, day/night/roof/weather checks, quantum generator settings/redstone, data-driven molecular recipes, all materials and three solar helmets, double slab, crafting/config switches, charge and dye preservation, vanilla dye support, GUI/network sync, helmet HUD, original model and both active plasma/particle layers, original en/ru/textures, JEI molecular page. Quantum generator stays creative-only as in the reference. Optional absent addon-output tags cannot consume input; recipes become usable when the tags are present.
+
+Molecular processing reserves the exact input, persists pending output and EU across saves, caps accepted EU across multiple injections, pauses for a full output slot, and refunds reserved input on breaking once. Helmets charge armour before inventory/self, preserve fractional EU, and hybrid/ultimate replenish air. Panel GUI synchronizes server balance values. Original recipe switches are custom NeoForge conditions evaluated on datapack reload.
+
+Validation: dedicated server **53 checks, 0 failed**, including actual solar→BatBox, quantum→MFSU, quantum→molecular completion, weather/time, persistence/full output/overflow, helmet charge/air/priority/fractional EU/dye/upgrade, original hard/easy/simple recipes through two actual reloads. Hidden silent client with JEI passed; inspected all six GUI screens, original models/items, dyed helmet, HUD and ASP molecular + IC2 macerator pages. No missing-model/texture or error/exception messages in final client log. Build passed. JAR/SHA256/logs/screenshots: versions/0.1.0 (gitignored). Local commits only; no push/release/install/production-server changes.
+
+During startup found a real IC2+JEI class-init deadlock. Fixed in IC2 **0.1.18 / 0d5bc6a**, lazy machine descriptor initialization. ASP gradle.properties now requires its archived JAR; do not revert to 0.1.17.
+
+### Resume point
+
+Next: EMT 1.2.6.2 (../electro-magic-tools-modern/related/emt-reference/src, 120 remapped classes; skeleton has no build.gradle yet), then Gravi Suit, then combined all-mod compatibility audit. ASP+IC2 is checked; full EMT/Gravi compatibility and separate dedicated-server ASP GUI multiplayer test remain unverified. Current takeover was explicitly requested while Claude was idle (not a usage-limit reset); do not wake Claude mid-batch without a handoff. When returning to Claude, stop edits and verify real resumed tool work.

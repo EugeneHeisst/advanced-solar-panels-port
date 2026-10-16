@@ -12,8 +12,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 /** GUIs of the ASP machines: built on both sides from the block entity at the sent position, like IC2's ic2:tile menu. */
 public final class AspMenus {
     public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(Registries.MENU, AdvancedSolarPanels.MODID);
-    public static final Supplier<MenuType<ContainerBase<?>>> TILE = REGISTRY.register("tile", () -> IMenuTypeExtension.create((id, inv, buf) -> {
-        if (inv.player.level().getBlockEntity(buf.readBlockPos()) instanceof IHasGui gui) return gui.getGuiContainer(id, inv, buf);
+    public static final Supplier<MenuType<com.chocohead.advsolar.gui.ContainerAsp<?>>> TILE = REGISTRY.register("tile", () -> IMenuTypeExtension.create((id, inv, buf) -> {
+        if (inv.player.level().getBlockEntity(buf.readBlockPos()) instanceof IHasGui gui) return (com.chocohead.advsolar.gui.ContainerAsp<?>)gui.getGuiContainer(id, inv, buf);
         throw new IllegalStateException("No ASP GUI block entity at the sent position");
     }));
     private AspMenus() {}

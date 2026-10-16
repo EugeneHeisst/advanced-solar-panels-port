@@ -1,0 +1,19 @@
+{
+  "type": "ic2:shapeless",
+  "ingredients": [
+    {
+      "item": "advanced_solar_panels:ultimate_solar_panel"
+    }
+  ],
+  "result": {
+    "id": "advanced_solar_panels:hybrid_solar_panel",
+    "count": 8
+  },
+  "neoforge:conditions": [
+    {
+      "type": "advanced_solar_panels:config",
+      "key": "ultimate_solar_panel",
+      "value": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "advanced_solar_panels:molecular_transformer",
+  "input": {
+    "item": "minecraft:sand"
+  },
+  "energy": 50000,
+  "output": {
+    "id": "minecraft:gravel",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "ic2:shaped",
+  "pattern": [
+    " G ",
+    "GUG",
+    " G "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "U": {
+      "tag": "c:ingots/uranium"
+    }
+  },
+  "result": {
+    "id": "advanced_solar_panels:irradiant_uranium",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "ic2:shaped",
+  "pattern": [
+    "III",
+    "IPI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "P": {
+      "tag": "c:ingots/iridium"
+    }
+  },
+  "result": {
+    "id": "advanced_solar_panels:iridium_iron_plate",
+    "count": 1
+  }
+}

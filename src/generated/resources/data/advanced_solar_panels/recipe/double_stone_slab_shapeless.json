@@ -1,0 +1,22 @@
+{
+  "type": "ic2:shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:smooth_stone_slab"
+    },
+    {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  ],
+  "result": {
+    "id": "advanced_solar_panels:double_stone_slab",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "advanced_solar_panels:config",
+      "key": "double_stone_slab",
+      "value": true
+    }
+  ]
+}

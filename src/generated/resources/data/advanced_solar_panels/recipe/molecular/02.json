@@ -1,0 +1,11 @@
+{
+  "type": "advanced_solar_panels:molecular_transformer",
+  "input": {
+    "item": "minecraft:netherrack"
+  },
+  "energy": 70000,
+  "output": {
+    "id": "minecraft:gunpowder",
+    "count": 2
+  }
+}

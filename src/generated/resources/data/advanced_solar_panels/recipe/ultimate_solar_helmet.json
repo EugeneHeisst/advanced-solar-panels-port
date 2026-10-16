@@ -1,0 +1,36 @@
+{
+  "type": "advanced_solar_panels:colour_shaped",
+  "pattern": [
+    " S ",
+    "CQC",
+    "GTG"
+  ],
+  "key": {
+    "S": {
+      "item": "advanced_solar_panels:ultimate_solar_panel"
+    },
+    "C": {
+      "item": "ic2:advanced_circuit"
+    },
+    "Q": {
+      "item": "ic2:quantum_helmet"
+    },
+    "G": {
+      "item": "ic2:glass_fibre_cable"
+    },
+    "T": {
+      "item": "ic2:hv_transformer"
+    }
+  },
+  "result": {
+    "id": "advanced_solar_panels:ultimate_solar_helmet",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "advanced_solar_panels:config",
+      "key": "ultimate_solar_helmet",
+      "value": true
+    }
+  ]
+}

@@ -29,9 +29,11 @@ public final class AdvancedSolarPanels {
     public AdvancedSolarPanels(IEventBus bus, ModContainer container) {
         container.registerConfig(ModConfig.Type.COMMON, AspConfig.SPEC);
         AspBlocks.REGISTRY.register(bus);
+        com.chocohead.advsolar.ref.AspArmorMaterials.REGISTRY.register(bus);
         AspItems.REGISTRY.register(bus);
         AspBlockEntities.REGISTRY.register(bus);
         AspMenus.REGISTRY.register(bus);
+        com.chocohead.advsolar.recipe.ConfigCondition.REGISTRY.register(bus);
         AspRecipes.TYPES.register(bus);
         AspRecipes.SERIALIZERS.register(bus);
         AspTabs.REGISTRY.register(bus);
