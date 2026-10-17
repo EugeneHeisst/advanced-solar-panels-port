@@ -46,3 +46,8 @@ During startup found a real IC2+JEI class-init deadlock. Fixed in IC2 **0.1.18 /
 ### Resume point
 
 Next: EMT 1.2.6.2 (../electro-magic-tools-modern/related/emt-reference/src, 120 remapped classes; skeleton has no build.gradle yet), then Gravi Suit, then combined all-mod compatibility audit. ASP+IC2 is checked; full EMT/Gravi compatibility and separate dedicated-server ASP GUI multiplayer test remain unverified. Current takeover was explicitly requested while Claude was idle (not a usage-limit reset); do not wake Claude mid-batch without a handoff. When returning to Claude, stop edits and verify real resumed tool work.
+
+
+## Codex 2026-10-17 — ASP 0.1.2
+
+Fixed the alternate double slab item replacing vanilla smooth_stone_slab's block-to-item association. Its explicit name now uses the existing EN/RU translation. Four actual placement/mapping/crafting regression checks: server58/58 passed. Build/archive versions/0.1.2 done; combined full-pack server29/29 and hidden client/JEI14/14 passed. User approved release/install in latest Claude session; latest state ../CLAUDE_CONTINUE_PORTS.md.
