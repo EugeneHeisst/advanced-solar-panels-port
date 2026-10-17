@@ -58,3 +58,14 @@ Fixed the alternate double slab item replacing vanilla smooth_stone_slab's block
 Branch codex/solar-charge-save; main/production untouched. Panel marksdirty when chargeSlots consumesEU even if storage0→0; signeddraw returns EnergyNet refunds and retains positiveoverdrawfloor. Requires isolatedIC2.24 energy persistencedirtyfix.
 Native -Dasp.audit=persistence uses realblockticks/EnergyNet: selfcharge64EU, separatedsource/receiverchunks, MFSU/ElectricFurnace injection, signedsource draw, completeyellowwool500000EU→glowstone. Baseline16checks7fail, final16/16 with1011native ticks; generated501248-buffer1248-paid500000=0 (baseline lost224EU). No injectedenergy/manualmachine ticks in these cases.
 Regular58/58 audit and build PASS; logs /tmp/asp-review-{baseline,fixed,regression,build}.log, archives versions/0.1.3. No push/release/install.
+
+
+## Visual fixes — 0.1.4, 2026-10-17
+
+The user reported four invisible helmet stacks (empty/full hybrid and ultimate) in the creative tab. The sprites and models were present; the item color handler returned 24-bit RGB, which Minecraft 1.21.1 interprets as zero-alpha ARGB. The base now returns `FastColor.ARGB32.opaque(rgb)` and the overlay returns opaque white (`-1`). Original dyeing is preserved.
+
+`HelmetIconAudit` uses real `GuiGraphics.renderItem` without EU/durability bars, then inspects captured pixels for all eight empty/full/default/dyed variants. Baseline: 32/32 failed, every icon had zero visible pixels. Fixed: 32/32 passed, base dye and overlay invariance included; screenshots visually inspected. Existing GUI and JEI pages passed. Build passed; JAR, SHA256, baseline/fixed logs and screenshots archived in `versions/0.1.4/`. Minimum IC2 version remains 0.1.24.
+
+This batch is local and awaits application after the player's current Prism session closes. Installed baseline remains ASP 0.1.3 / IC2 0.1.26, already published by the earlier approved Claude deployment. Do not overwrite jars used by a running Prism JVM. The new visual fixes have not been human-tested and have not been pushed or released; user review is required before publishing. IC2 companion visual fixes are in 0.1.27.
+
+Новый набор IC2 0.1.27 / ASP 0.1.4 вместе с полным набором модов прошёл выделенный сервер совместимости 29/29 и скрытый клиент с JEI 14/14, без ERROR/FAIL. Журналы приложены к архиву этой версии.
