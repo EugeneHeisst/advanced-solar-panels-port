@@ -69,3 +69,6 @@ The user reported four invisible helmet stacks (empty/full hybrid and ultimate) 
 This batch is local and awaits application after the player's current Prism session closes. Installed baseline remains ASP 0.1.3 / IC2 0.1.26, already published by the earlier approved Claude deployment. Do not overwrite jars used by a running Prism JVM. The new visual fixes have not been human-tested and have not been pushed or released; user review is required before publishing. IC2 companion visual fixes are in 0.1.27.
 
 Новый набор IC2 0.1.27 / ASP 0.1.4 вместе с полным набором модов прошёл выделенный сервер совместимости 29/29 и скрытый клиент с JEI 14/14, без ERROR/FAIL. Журналы приложены к архиву этой версии.
+
+
+Installation update — 2026-10-17 19:22 Moscow: user said «заменяй» and closed Prism. IC2 0.1.27 and ASP 0.1.4 now installed on production+Prism; all five principal port hashes verified at both locations. Countdown5→1, save-allflush, graceful stop, offline world backup208991731bytes and oldJARbackups (`mod-backups/codex-visual-20261017-192011/`), successful start Done1.634s,0ERROR,20TPS/average1.9ms. Exact manifest `../compat-test/CODEX_VISUAL_DEPLOY_STATE.json` and `CURRENT_DEPLOY_STATE.json`. Previous 'not installed' notes are historical. New GitHub push/releases still await review/approval; no publication was authorized by the replacement request.
