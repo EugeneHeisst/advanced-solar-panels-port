@@ -51,3 +51,10 @@ Next: EMT 1.2.6.2 (../electro-magic-tools-modern/related/emt-reference/src, 120 
 ## Codex 2026-10-17 — ASP 0.1.2
 
 Fixed the alternate double slab item replacing vanilla smooth_stone_slab's block-to-item association. Its explicit name now uses the existing EN/RU translation. Four actual placement/mapping/crafting regression checks: server58/58 passed. Build/archive versions/0.1.2 done; combined full-pack server29/29 and hidden client/JEI14/14 passed. User approved release/install in latest Claude session; latest state ../CLAUDE_CONTINUE_PORTS.md.
+
+
+## Codex isolated review — 0.1.3, 2026-10-17
+
+Branch codex/solar-charge-save; main/production untouched. Panel marksdirty when chargeSlots consumesEU even if storage0→0; signeddraw returns EnergyNet refunds and retains positiveoverdrawfloor. Requires isolatedIC2.24 energy persistencedirtyfix.
+Native -Dasp.audit=persistence uses realblockticks/EnergyNet: selfcharge64EU, separatedsource/receiverchunks, MFSU/ElectricFurnace injection, signedsource draw, completeyellowwool500000EU→glowstone. Baseline16checks7fail, final16/16 with1011native ticks; generated501248-buffer1248-paid500000=0 (baseline lost224EU). No injectedenergy/manualmachine ticks in these cases.
+Regular58/58 audit and build PASS; logs /tmp/asp-review-{baseline,fixed,regression,build}.log, archives versions/0.1.3. No push/release/install.

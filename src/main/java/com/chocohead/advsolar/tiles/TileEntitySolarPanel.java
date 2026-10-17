@@ -29,8 +29,8 @@ public class TileEntitySolarPanel extends TileEntityInventory implements IEnergy
     public void checkTheSky(){generation=sky(level,worldPosition.above());}
     public void tryGenerateEnergy(int amount){storage=Math.min(maxStorage,storage+Math.max(0,amount));}
     public int output(){return generation==GenerationState.DAY?dayPower:generation==GenerationState.NIGHT?nightPower:0;}
-    protected void updateEntityServer(){if(ticker++%128==0)checkTheSky();double old=storage;tryGenerateEnergy(output());storage-=chargeSlots.charge(storage);setActive(generation!=GenerationState.NONE);if(storage!=old)setChanged();}
-    public boolean emitsEnergyTo(BlockEntity receiver,Direction side){return true;}public int getSourceTier(){return tier;}public double getOfferedEnergy(){return Math.min(storage,EnergyNet.instance.getPowerFromTier(tier));}public void drawEnergy(double n){storage=Math.max(0,storage-Math.max(0,n));setChanged();}
+    protected void updateEntityServer(){if(ticker++%128==0)checkTheSky();double old=storage;tryGenerateEnergy(output());double charged=chargeSlots.charge(storage);storage-=charged;setActive(generation!=GenerationState.NONE);if(storage!=old||charged>0)setChanged();}
+    public boolean emitsEnergyTo(BlockEntity receiver,Direction side){return true;}public int getSourceTier(){return tier;}public double getOfferedEnergy(){return Math.min(storage,EnergyNet.instance.getPowerFromTier(tier));}public void drawEnergy(double n){storage=Math.max(0,storage-n);setChanged();}
     public void onLoaded(){super.onLoaded();if(!level.isClientSide&&!registered){EnergyNet.instance.addTile(this);registered=true;checkTheSky();}}
     public void onUnloaded(){if(registered){EnergyNet.instance.removeTile(this);registered=false;}super.onUnloaded();}
     public ContainerBase<?> getGuiContainer(int id,Inventory i){return new com.chocohead.advsolar.gui.ContainerAsp.Solar(id,i,this);}
