@@ -4,7 +4,7 @@ license="Advanced Solar Panels license (original); unofficial port"
 [[mods]]
 modId="advanced_solar_panels"
 version="${version}"
-displayName="Advanced Solar Panels PORT"
+displayName="Advanced Solar Panels UNOFFICIAL PORT"
 authors="Icedfire, SeNtiMeL, Chocohead"
 description="Неофициальный порт Advanced Solar Panels 4.3.0 на Minecraft 1.21.1 (аддон IndustrialCraft 2 PORT). Unofficial port of Advanced Solar Panels 4.3.0 to Minecraft 1.21.1 (an IndustrialCraft 2 PORT addon)."
 [[dependencies.advanced_solar_panels]]
